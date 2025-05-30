@@ -67,14 +67,25 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    cursor: none !important;
+    /* Corrected path */
+  }
+
   * {
     @apply border-border !scroll-smooth;
   }
+
   body {
     @apply bg-background text-foreground;
+    /* cursor: url('/rocket-cursor.png'), auto; */
+    /* Corrected path */
   }
-  button {
+
+  button,a {
     @apply active:outline-none;
+    cursor: none !important;
   }
 }
 

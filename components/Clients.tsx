@@ -12,6 +12,7 @@ const Clients = () => {
         Kind words from
         <span className="text-purple"> satisfied clients</span>
       </h1>
+      <p className="text-center">Here are some testimonials from my previous clients.</p>
 
       <div className="flex flex-col items-center max-lg:mt-10">
         <div

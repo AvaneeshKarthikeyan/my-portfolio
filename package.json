@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "vercel --prod"
+    "deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.4",
@@ -26,10 +27,13 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-lottie": "^1.2.4",
+    "swiper": "^11.2.6",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.163.0",
     "three-globe": "^2.31.0",
+    "tsparticles": "^2.12.0",
+    "tsparticles-engine": "^2.12.0",
     "vercel": "^34.0.0"
   },
   "devDependencies": {
@@ -40,6 +44,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
