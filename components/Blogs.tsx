@@ -1,85 +1,81 @@
 "use client";
 import { FaLocationArrow } from "react-icons/fa6";
-import { blogs } from "@/data"; // Import blogs data
-import { Swiper, SwiperSlide } from "swiper/react"; // Swiper components
-import { Autoplay } from "swiper/modules"; // ✅ Import Autoplay module
-import "swiper/css"; // Import Swiper CSS
+import { blogs } from "@/data"; // Your blogs data
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const Blogs = () => {
   return (
-    <div id="blogs" className="py-20">
-      <h1 className="heading mb-10">
+    <div id="blogs" className="py-20 px-4 max-w-[1200px] mx-auto">
+      <h1 className="heading mb-10 text-center">
         My <span className="text-purple">Blogs</span>
       </h1>
 
       <Swiper
-        modules={[Autoplay]} // ✅ Register autoplay module
-        spaceBetween={50}
+        modules={[Autoplay]}
+        spaceBetween={30}
         slidesPerView={3}
         loop={true}
         autoplay={{
-          delay: 3000, // ✅ 3 seconds between slides
-          disableOnInteraction: false, // ✅ Keeps autoplay even after user interacts
+          delay: 3000,
+          disableOnInteraction: false,
         }}
         breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
           640: {
             slidesPerView: 1,
+            spaceBetween: 20,
           },
           768: {
             slidesPerView: 2,
+            spaceBetween: 30,
           },
           1024: {
             slidesPerView: 3,
+            spaceBetween: 30,
           },
         }}
         className="mySwiper"
       >
         {blogs.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] border rounded-lg overflow-hidden">
+            <div
+              className="flex flex-col h-full border rounded-lg overflow-hidden"
+              style={{ backgroundColor: "#13162D" }}
+            >
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center w-full h-full"
+                className="flex flex-col flex-grow"
               >
-                <div className="relative flex items-center justify-center w-full h-[20vh] lg:h-[30vh] mb-10 overflow-hidden">
-                  <div
-                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                    style={{ backgroundColor: "#13162D" }}
-                  >
-                    <img
-                      src="/bg.png"
-                      alt="bgimg"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-hidden">
                   <img
                     src={item.img}
-                    alt="cover"
-                    className="z-10 absolute bottom-0 w-full object-cover"
+                    alt={item.title}
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-center">
-                  {item.title}
-                </h1>
-
-                <p
-                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-center"
-                  style={{
-                    color: "#BEC1DD",
-                    margin: "1vh 0",
-                  }}
-                >
-                  {item.des}
-                </p>
-
-                <div className="flex items-center justify-center mt-7 mb-3">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Blog
+                <div className="p-4 flex flex-col flex-grow">
+                  <h2 className="font-bold text-xl sm:text-2xl mb-2 line-clamp-2">
+                    {item.title}
+                  </h2>
+                  <p
+                    className="text-sm sm:text-base text-[#BEC1DD] flex-grow line-clamp-3"
+                    style={{ marginBottom: "1rem" }}
+                  >
+                    {item.des}
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+
+                  <div className="flex items-center mt-auto text-purple text-lg font-semibold">
+                    <p>Check Live Blog</p>
+                    <FaLocationArrow className="ml-2" color="#CBACF9" />
+                  </div>
                 </div>
               </a>
             </div>

@@ -62,6 +62,7 @@ const nextConfig = {
   trailingSlash: true,
   assetPrefix: isGithubPages ? `/${repo}/` : '',
   basePath: isGithubPages ? `/${repo}` : '',
+//   output: 'export',
   images: {
     remotePatterns: [
       {

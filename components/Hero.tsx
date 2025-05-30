@@ -46,8 +46,11 @@ const Hero = () => {
             Welcome to My Portfolio
           </h1>
 
-          <p className="text-center text-lg md:text-xl text-purple-400 font-medium">
+          {/* <p className="text-center text-lg md:text-xl text-purple-400 font-medium">
             "Aspiring data wizard turning chaos into clarity."
+          </p> */}
+          <p className="text-center text-lg md:text-xl text-purple-400 font-medium">
+            &quot;Aspiring data wizard turning chaos into clarity.&quot;
           </p>
 
           {/**
@@ -72,7 +75,7 @@ const Hero = () => {
                 position="right"
               />
             </a>
-            <a href="mailto:avaneesh.karthik@gmail.com?subject=Let's get in touch">
+            <a href="mailto:avaneesh.karthik@gmail.com?subject=Let%27s get in touch">
               <MagicButton
                 title="Let's get in touch"
                 icon={<FaEnvelope />}
