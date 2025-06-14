@@ -122,12 +122,8 @@ export const socialMedia = [
     img: "/git.svg",
     link: "https://github.com/AvaneeshKarthikeyan",
   },
-  // {
-  //   id: 2,
-  //   img: "/twit.svg",
-  // },
   {
-    id: 3,
+    id: 2,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/avaneesh-karthikeyan-iyer/",
   },
