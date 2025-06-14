@@ -7,6 +7,15 @@ export const navItems = [
   { name: "Contact", link: "/#contact" },
 ];
 
+export const gooeyItems = [
+  // { name: "Home", link: "#home" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Approach", href: "/#approach" },
+  { label: "Publications", href: "/publications" },
+  { label: "Contact", href: "/#contact" },
+];
+
 export const projects = [
   {
     id: 1,
@@ -111,14 +120,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/AvaneeshKarthikeyan",
   },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
+  // {
+  //   id: 2,
+  //   img: "/twit.svg",
+  // },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/avaneesh-karthikeyan-iyer/",
   },
 ];
 
@@ -193,7 +204,6 @@ export const magazines = [
   },
   // more...
 ];
-
 
 /* export const gridItems = [
   {

@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
-    <div id="about" className="py-12 md:py-16 lg:py-20 mt-20">
+    <div id="about" className="scroll-mt-32 py-12 md:py-16 lg:py-20 mt-20">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight

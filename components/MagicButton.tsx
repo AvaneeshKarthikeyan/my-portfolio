@@ -29,9 +29,32 @@ const MagicButton = ({
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
       {/* remove px-3 py-1, add px-5 gap-2 */}
-      <span
+      {/* <span
         className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg
-             bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 ${otherClasses}`}
+             bg-slate-950 px-7 text-sm font-small text-white backdrop-blur-3xl gap-2 ${otherClasses}`}
+      >
+        {position === "left" && icon}
+        {title}
+        {position === "right" && icon}
+      </span> */}
+      <span
+        className={`
+    inline-flex
+    h-full
+    w-full
+    cursor-pointer
+    items-center
+    justify-center
+    rounded-lg
+    bg-slate-950
+    px-5 sm:px-7      // smaller padding on small screens
+    text-xs sm:text-sm // smaller text on small screens
+    font-medium
+    text-white
+    backdrop-blur-3xl
+    gap-1 sm:gap-2     // tighter gap on mobile
+    ${otherClasses}
+  `}
       >
         {position === "left" && icon}
         {title}
