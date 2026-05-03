@@ -133,10 +133,10 @@ export const papers = [
   {
     id: 1,
     title: "AgriForecast",
-    des: "A Machine Learning Solution forCrop Yield and Fertilizer Prediction for Developing Countries",
+    des: "A Machine Learning Solution for Crop Yield and Fertilizer Prediction for Developing Countries",
     img: "/agriculture.jpg",
     iconLists: [],
-    link: "https://harbinengineeringjournal.com/index.php/journal/article/view/2771/2307",
+    link: "https://share.google/cN2nAxd9v7ci9swTk",
   },
   {
     id: 2,
@@ -144,7 +144,23 @@ export const papers = [
     des: "Design of a Signature-Based Feature Selection Model with Ensemble Deep Learning Using Bi-LSTM and Bi-GRU for Chronic Kidney Disease Classification",
     img: "/health.jpg",
     iconLists: [],
-    link: "https://www.ijisae.org/index.php/IJISAE/article/view/6665/5527",
+    link: "https://www.ijisae.org/index.php/IJISAE/article/download/6665/5527/11847",
+  },
+  {
+    id: 3,
+    title: "Deep Reinforcement Learning for Edge Computing",
+    des: "Design of a Deep Reinforcement Learning Approach for Optimization of Task Offloading and Resource Allocation for Edge Computing Networks",
+    img: "/edgecomputing.jpg",
+    iconLists: [],
+    link: "https://www.researchgate.net",
+  },
+  {
+    id: 4,
+    title: "Automated Rorschach Test",
+    des: "Automated Rorschach Test for Personality and Mental Health",
+    img: "/rorschach.jpg",
+    iconLists: [],
+    link: "https://ieeexplore.ieee.org/document/11448860",
   },
 ];
 
@@ -198,6 +214,4 @@ export const magazines = [
     img: "/megabyte2025.png",
     link: "https://online.fliphtml5.com/vxsxt/ilcm/#p=1",
   },
-  // more...
 ];
-
