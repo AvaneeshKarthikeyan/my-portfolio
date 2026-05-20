@@ -1,66 +1,67 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+type NavItem = {
+  name: string;
+  link: string;
+};
 
 export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-  }[];
+  navItems: NavItem[];
   className?: string;
 }) => {
-  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <motion.div
+      {/* NAVBAR */}
+      <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           type: "spring",
           stiffness: 120,
-          damping: 20,
+          damping: 18,
         }}
         className={cn(
           "fixed top-4 inset-x-0 z-[5000] mx-auto",
-          "w-[95%] md:w-auto",
-          "px-4 sm:px-6 md:px-8 py-3",
+          "w-[95%] md:w-fit",
           "rounded-2xl border border-white/10",
-          "backdrop-blur-xl bg-[rgba(17,25,40,0.75)]",
-          "shadow-[0_8px_32px_rgba(0,0,0,0.25)]",
-          "flex items-center justify-between",
+          "bg-black/30 backdrop-blur-xl",
+          "shadow-[0_8px_32px_rgba(0,0,0,0.35)]",
+          "px-4 py-3",
           className
         )}
       >
-        {/* Desktop Nav */}
-        <div className="hidden sm:flex items-center gap-2 md:gap-4">
-          {navItems.map((navItem, idx) => {
-            const isActive = pathname === navItem.link;
-
-            return (
-              <Link
-                key={`nav-${idx}`}
-                href={navItem.link}
-                className={cn(
-                  "px-3 py-2 rounded-full text-sm transition-all duration-300",
-                  isActive
-                    ? "text-blue-400 bg-white/5"
-                    : "text-white hover:text-blue-300 hover:bg-white/5"
-                )}
-              >
-                {navItem.name}
-              </Link>
-            );
-          })}
+        {/* Desktop */}
+        <div className="hidden md:flex items-center gap-2">
+          {navItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              className="
+                relative
+                px-4 py-2
+                rounded-full
+                text-sm
+                text-neutral-200
+                transition-all
+                duration-300
+                hover:text-white
+                hover:bg-white/10
+              "
+            >
+              {item.name}
+            </Link>
+          ))}
 
           {/* Divider */}
           <div className="mx-2 h-5 w-px bg-white/10" />
@@ -70,7 +71,13 @@ export const FloatingNav = ({
             href="https://github.com/Avaneesh-Karthikeyan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-white hover:text-blue-300 transition"
+            className="
+              px-3 py-2
+              text-sm
+              text-neutral-300
+              hover:text-white
+              transition
+            "
           >
             GitHub
           </a>
@@ -80,57 +87,77 @@ export const FloatingNav = ({
             href="https://www.linkedin.com/in/avaneesh-karthikeyan-iyer/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-white hover:text-blue-300 transition"
+            className="
+              px-3 py-2
+              text-sm
+              text-neutral-300
+              hover:text-white
+              transition
+            "
           >
             LinkedIn
           </a>
         </div>
 
         {/* Mobile */}
-        <div className="flex sm:hidden w-full justify-between items-center">
-          <span className="text-white text-sm font-semibold">
+        <div className="flex md:hidden items-center justify-between gap-4">
+          <span className="text-white text-sm font-medium">
             Navigation
           </span>
 
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 text-white"
-            aria-label="Toggle menu"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="text-white"
+            aria-label="Toggle navigation"
           >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
-      </motion.div>
+      </motion.nav>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            exit={{ opacity: 0, y: -12 }}
             transition={{
-              type: "spring",
-              stiffness: 150,
-              damping: 18,
+              duration: 0.2,
             }}
-            className="fixed top-20 left-4 right-4 z-[4999]
+            className="
+              fixed
+              top-24
+              left-4
+              right-4
+              z-[4999]
               rounded-2xl
-              border border-white/10
-              bg-[rgba(17,25,40,0.92)]
+              border
+              border-white/10
+              bg-black/80
               backdrop-blur-xl
               p-4
-              flex flex-col gap-3
-              sm:hidden"
+              flex
+              flex-col
+              gap-2
+              md:hidden
+            "
           >
-            {navItems.map((navItem, idx) => (
+            {navItems.map((item, index) => (
               <Link
-                key={`mobile-${idx}`}
-                href={navItem.link}
+                key={index}
+                href={item.link}
                 onClick={() => setMenuOpen(false)}
-                className="text-white px-4 py-2 rounded-lg hover:bg-white/10 transition"
+                className="
+                  px-4 py-3
+                  rounded-xl
+                  text-neutral-200
+                  hover:text-white
+                  hover:bg-white/10
+                  transition
+                "
               >
-                {navItem.name}
+                {item.name}
               </Link>
             ))}
 
@@ -139,7 +166,7 @@ export const FloatingNav = ({
                 href="https://github.com/Avaneesh-Karthikeyan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-300 transition"
+                className="text-neutral-300 hover:text-white transition"
               >
                 GitHub
               </a>
@@ -148,7 +175,7 @@ export const FloatingNav = ({
                 href="https://www.linkedin.com/in/avaneesh-karthikeyan-iyer/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-300 transition"
+                className="text-neutral-300 hover:text-white transition"
               >
                 LinkedIn
               </a>
