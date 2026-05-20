@@ -56,8 +56,8 @@ const Hero = () => {
 
           {/* Main Statement */}
           <TextGenerateEffect
-            words="A problem solver driven by curiosity, research, and intelligent system design - building AI solutions that move from concept to impactful deployment."
-            className="text-center text-2xl md:text-3xl lg:text-4xl text-purple-600 font-bold leading-tight"
+          words="Engineering AI solutions that transform ideas into impact."
+          className="text-center text-2xl md:text-3xl lg:text-4xl text-purple-600 font-bold leading-tight"
           />
 
           {/* Intro */}
