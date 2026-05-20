@@ -8,8 +8,7 @@ const Hero = () => {
   return (
     <div id="about" className="scroll-mt-32 py-12 md:py-16 lg:py-20 mt-20">
       {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
+       * UI: Spotlights
        */}
       <div>
         <Spotlight
@@ -20,53 +19,54 @@ const Hero = () => {
           className="h-[50vh] w-[40vw] top-10 left-full"
           fill="purple"
         />
-        <Spotlight className="left-80 top-20 h-[50vh] w-[40vw]" fill="blue" />
+        <Spotlight
+          className="left-80 top-20 h-[50vh] w-[40vw]"
+          fill="blue"
+        />
       </div>
 
       {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
+       * Background Grid
        */}
       <div
-        className="h-[70vh] w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       absolute top-0 left-0 flex items-center justify-center"
+        className="h-[70vh] w-full dark:bg-black-100 bg-white 
+        dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+        absolute top-0 left-0 flex items-center justify-center"
       >
-        {/* Radial gradient for the container to give a faded look */}
+        {/* Radial gradient */}
         <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
-         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
+          className="absolute pointer-events-none inset-0 flex items-center 
+          justify-center dark:bg-black-100 bg-white 
+          [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
 
       <div className="flex justify-center relative z-10">
         <div className="max-w-[85vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center space-y-6">
+
+          {/* Heading */}
           <h1 className="heading text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-            Welcome to My Portfolio
+            Welcome to My Digital Hive
           </h1>
 
-          {/* <p className="text-center text-lg md:text-xl text-purple-400 font-medium">
-            "Aspiring data wizard turning chaos into clarity."
-          </p> */}
+          {/* Tagline */}
           <p className="text-center text-lg md:text-xl text-purple-400 font-medium">
-            &quot;Aspiring data wizard turning chaos into clarity.&quot;
+            &quot;Turning intelligence into innovation through AI engineering.&quot;
           </p>
 
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
+          {/* Main Statement */}
           <TextGenerateEffect
-            words="A visionary who uncovers hidden problems and crafts mind-blowing solutions."
+            words="A problem solver driven by curiosity, research, and intelligent system design - building AI solutions that move from concept to impactful deployment."
             className="text-center text-2xl md:text-3xl lg:text-4xl text-purple-600 font-bold leading-tight"
           />
 
+          {/* Intro */}
           <p className="text-center md:tracking-wider text-sm md:text-base lg:text-lg text-gray-300">
-            Hi! I&apos;m Avaneesh Karthikeyan, an Aspiring Data Scientist.
+            Hi! I&apos;m Avaneesh Karthikeyan, an aspiring AI Engineer passionate
+            about intelligent systems, AI agents, and real-world innovation.
           </p>
 
+          {/* Buttons */}
           <div className="mt-8 flex gap-4">
             <a href="/Avaneesh_Iyer_Resume.pdf" download>
               <MagicButton
@@ -75,7 +75,8 @@ const Hero = () => {
                 position="right"
               />
             </a>
-            <a href="mailto:avaneesh.karthik@gmail.com?subject=Let%27s get in touch">
+
+            <a href="mailto:avaneesh.karthik@gmail.com?subject=Let%27s%20get%20in%20touch">
               <MagicButton
                 title="Let's get in touch"
                 icon={<FaEnvelope />}
@@ -83,6 +84,7 @@ const Hero = () => {
               />
             </a>
           </div>
+
         </div>
       </div>
     </div>
