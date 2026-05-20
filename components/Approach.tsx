@@ -5,7 +5,10 @@ import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
-    <section id="approach" className="w-full py-20">
+    <section
+  id="approach"
+  className="w-full py-20 scroll-mt-32"
+>
       <h1 className="heading">
         My <span className="text-purple">approach</span>
       </h1>
