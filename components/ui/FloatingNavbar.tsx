@@ -39,7 +39,6 @@ export const FloatingNav = ({
         "shadow-[0_8px_32px_rgba(0,0,0,0.35)]",
         "px-5 py-2.5",
         className
-      )}
         )}
       >
         {/* Desktop Navbar */}
