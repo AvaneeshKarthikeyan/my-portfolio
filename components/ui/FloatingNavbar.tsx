@@ -22,7 +22,7 @@ export const FloatingNav = ({
 
   return (
     <>
-      {/* NAVBAR */}
+      {/* Floating Navbar */}
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,16 +32,16 @@ export const FloatingNav = ({
           damping: 18,
         }}
         className={cn(
-          "fixed top-4 inset-x-0 z-[5000] mx-auto",
-          "w-[95%] md:w-fit",
+          "fixed top-5 inset-x-0 z-[5000] mx-auto",
+          "w-[92%] md:w-fit",
           "rounded-2xl border border-white/10",
-          "bg-black/30 backdrop-blur-xl",
+          "bg-black/40 backdrop-blur-2xl",
           "shadow-[0_8px_32px_rgba(0,0,0,0.35)]",
-          "px-4 py-3",
+          "px-5 py-3",
           className
         )}
       >
-        {/* Desktop */}
+        {/* Desktop Navbar */}
         <div className="hidden md:flex items-center gap-2">
           {navItems.map((item, index) => (
             <Link
@@ -49,9 +49,10 @@ export const FloatingNav = ({
               href={item.link}
               className="
                 relative
-                px-4 py-2
+                px-5 py-2
                 rounded-full
                 text-sm
+                font-medium
                 text-neutral-200
                 transition-all
                 duration-300
@@ -62,44 +63,9 @@ export const FloatingNav = ({
               {item.name}
             </Link>
           ))}
-
-          {/* Divider */}
-          <div className="mx-2 h-5 w-px bg-white/10" />
-
-          {/* GitHub */}
-          <a
-            href="https://github.com/Avaneesh-Karthikeyan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              px-3 py-2
-              text-sm
-              text-neutral-300
-              hover:text-white
-              transition
-            "
-          >
-            GitHub
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/avaneesh-karthikeyan-iyer/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              px-3 py-2
-              text-sm
-              text-neutral-300
-              hover:text-white
-              transition
-            "
-          >
-            LinkedIn
-          </a>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile Navbar */}
         <div className="flex md:hidden items-center justify-between gap-4">
           <span className="text-white text-sm font-medium">
             Navigation
@@ -115,7 +81,7 @@ export const FloatingNav = ({
         </div>
       </motion.nav>
 
-      {/* MOBILE MENU */}
+      {/* Mobile Dropdown */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -160,26 +126,6 @@ export const FloatingNav = ({
                 {item.name}
               </Link>
             ))}
-
-            <div className="border-t border-white/10 pt-3 flex gap-4">
-              <a
-                href="https://github.com/Avaneesh-Karthikeyan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-300 hover:text-white transition"
-              >
-                GitHub
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/avaneesh-karthikeyan-iyer/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-300 hover:text-white transition"
-              >
-                LinkedIn
-              </a>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
