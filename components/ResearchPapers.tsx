@@ -106,7 +106,10 @@ const ResearchPapers = () => {
   }
 
   return (
-    <div id="projects" className="py-20">
+    <div
+  id="publications"
+  className="py-20 scroll-mt-32"
+>
       <h1 className="heading">
         My <span className="text-purple">Research Papers</span>
       </h1>
