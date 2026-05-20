@@ -32,7 +32,7 @@ export const FloatingNav = ({
           damping: 18,
         }}
         className={cn(
-          "fixed top-5 inset-x-0 z-[5000] mx-auto",
+  "fixed top-5 left-1/2 -translate-x-1/2 z-[5000]",
           "w-[92%] md:w-fit",
           "rounded-2xl border border-white/10",
           "bg-black/40 backdrop-blur-2xl",
