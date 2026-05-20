@@ -32,13 +32,14 @@ export const FloatingNav = ({
           damping: 18,
         }}
         className={cn(
-  "fixed top-5 left-1/2 -translate-x-1/2 z-[5000]",
-          "w-[92%] md:w-fit",
-          "rounded-2xl border border-white/10",
-          "bg-black/40 backdrop-blur-2xl",
-          "shadow-[0_8px_32px_rgba(0,0,0,0.35)]",
-          "px-5 py-3",
-          className
+        "fixed top-4 left-1/2 -translate-x-1/2 z-[5000]",
+        "w-[92%] md:w-fit",
+        "rounded-2xl border border-white/10",
+        "bg-black/40 backdrop-blur-2xl",
+        "shadow-[0_8px_32px_rgba(0,0,0,0.35)]",
+        "px-5 py-2.5",
+        className
+      )}
         )}
       >
         {/* Desktop Navbar */}
