@@ -158,7 +158,7 @@ export const papers = [
     id: 4,
     title: "Automated Rorschach Test",
     des: "Automated Rorschach Test for Personality and Mental Health",
-    img: "/rorschach.jpg",
+    img: "/Automated_Rorschach_Test.png",
     iconLists: [],
     link: "https://ieeexplore.ieee.org/document/11448860",
   },
