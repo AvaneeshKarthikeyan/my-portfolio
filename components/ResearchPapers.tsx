@@ -107,12 +107,13 @@ const ResearchPapers = () => {
 
   return (
     <div
-  id="publications"
-  className="py-20 scroll-mt-32"
->
+      id="publications"
+      className="py-20 scroll-mt-32"
+    >
       <h1 className="heading">
         My <span className="text-purple">Research Papers</span>
       </h1>
+
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {papers.map((item) => (
           <div
@@ -133,10 +134,12 @@ const ResearchPapers = () => {
                   >
                     <img src="/bg.png" alt="bgimg" />
                   </div>
+
+                  {/* Dynamic Paper Image */}
                   <img
                     src={item.img}
                     alt="cover"
-                    className="z-10 absolute bottom-0"
+                    className="z-10 absolute bottom-0 object-contain"
                   />
                 </div>
 
