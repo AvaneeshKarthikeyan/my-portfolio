@@ -144,7 +144,7 @@ export const papers = [
     des: "Design of a Signature-Based Feature Selection Model with Ensemble Deep Learning Using Bi-LSTM and Bi-GRU for Chronic Kidney Disease Classification",
     img: "/health.jpg",
     iconLists: [],
-    link: "https://www.ijisae.org/index.php/IJISAE/article/download/6665/5527/11847",
+    link: "https://ijisae.org/index.php/IJISAE/article/view/6665",
   },
 {
   id: 3,
@@ -152,7 +152,7 @@ export const papers = [
   des: "Design of a Deep Reinforcement Learning Approach for Optimization of Task Offloading and Resource Allocation for Edge Computing Networks",
   img: "/deep_rl.png",
     iconLists: [],
-    link: "https://www.researchgate.net",
+    link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781394355037.ch22",
   },
   {
     id: 4,
