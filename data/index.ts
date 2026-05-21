@@ -146,11 +146,11 @@ export const papers = [
     iconLists: [],
     link: "https://www.ijisae.org/index.php/IJISAE/article/download/6665/5527/11847",
   },
-  {
-    id: 3,
-    title: "Deep Reinforcement Learning for Edge Computing",
-    des: "Design of a Deep Reinforcement Learning Approach for Optimization of Task Offloading and Resource Allocation for Edge Computing Networks",
-    img: "/edgecomputing.jpg",
+{
+  id: 3,
+  title: "Deep Reinforcement Learning for Edge Computing",
+  des: "Design of a Deep Reinforcement Learning Approach for Optimization of Task Offloading and Resource Allocation for Edge Computing Networks",
+  img: "/deep_rl.png",
     iconLists: [],
     link: "https://www.researchgate.net",
   },
